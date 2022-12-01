@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  challenge2022:
+    container_name: challenge2022
+    hostname: challenge2022
+    build:
+      context: client
+      dockerfile: Dockerfile
+    ports:
+      - 2022:80
+    volumes:
+      - ./client:/var/www/html
+
